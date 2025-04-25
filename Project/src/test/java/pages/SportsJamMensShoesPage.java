@@ -12,10 +12,11 @@ import utils.WebDriverHelper;
 public class SportsJamMensShoesPage {
 
     WebDriverHelper webDriverHelper;
-    
+    ExtentTest test;
     public SportsJamMensShoesPage(WebDriver driver, ExtentTest test)
     {
         webDriverHelper = new WebDriverHelper(driver, test);
+        this.test = test;
     }
         
     /*
