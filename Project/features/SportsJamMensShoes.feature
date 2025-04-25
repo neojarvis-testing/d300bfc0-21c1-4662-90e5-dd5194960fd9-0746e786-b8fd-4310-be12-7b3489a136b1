@@ -1,4 +1,4 @@
-@test2
+@test10
 Feature: Verifying SportsJam Mens shoes page
   Scenario: Testing the various shoes categories in mens shows page
     When I verify the Home page url

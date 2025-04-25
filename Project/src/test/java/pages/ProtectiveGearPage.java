@@ -11,8 +11,8 @@ import utils.Base;
 import utils.WebDriverHelper;
 
 public class ProtectiveGearPage {
-    ExtentTest test;
-    WebDriverHelper helper;
+    public ExtentTest test;
+    public WebDriverHelper helper;
     public ProtectiveGearPage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver, test);
     }
@@ -260,54 +260,6 @@ public class ProtectiveGearPage {
             String data=helper.getText(ProtectiveGearLocators.BattingGlovesverify, "Verified ");
             Assert.assertEquals(data, "INNER THIGH PADS");
         } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    /*
-     * a. Method Name: testcase4
-     * b. Author Name: Muralidhar
-     * c. Description: It contains all the methods
-     * d. Parameter: None
-     * e. Return Type: void
-     */
-    public void testcase4(){
-        try{
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickOnBattingGloves();
-        verifyBattingGlovesURL();
-        verifyBattingGloves();
-        Base.driver.navigate().back();
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickOnBattingLegGuards();
-        verifyBattingLeguardURL();
-        verifyBattingLegGuard();
-        Base.driver.navigate().back();
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickOnWicketKeepingGloves();
-        verifyWicketKeepingGlovesURL();
-        verifyWicketKeepingGloves();
-        Base.driver.navigate().back();
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickoNWicketKeepingLegGuard();
-        verifyWicketKeepingLegGuardURL();
-        verifyWicketKeepingLegGuard();
-        Base.driver.navigate().back();
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickonCricketHelmets();
-        verifyCricketHelmetsURL();
-        verifyCricketHelmets();
-        Base.driver.navigate().back();
-        hoverOnTeamSport();
-        hoveredOnProtectiveGear();
-        clickOnInnerThighPads();
-        verifyInnerThighPadsURL();
-        verifyInnerThighPads();
-        }catch(Exception e){
             e.printStackTrace();
         }
     }

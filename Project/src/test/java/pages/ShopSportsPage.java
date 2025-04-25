@@ -11,8 +11,8 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class ShopSportsPage {
-    ExtentTest test;
-    WebDriverHelper helper;
+    public ExtentTest test;
+    public WebDriverHelper helper;
     public ShopSportsPage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver, test);
     }
@@ -173,7 +173,7 @@ public class ShopSportsPage {
         helper.clickOnElement(ShopSportsLocators.ok, "Clicked On ok1");
     }
     /*
-     * a. Method Name: verifyOK1
+     * a. Method Name: verifyOk1
      * b. Author Name: Muralidhar
      * c. Description: This will be used to Verify remove of first product.
      * d. Parameter: None
@@ -238,32 +238,7 @@ public class ShopSportsPage {
         }
         Screenshot.captureScreenShot("NO items");
     }
-    /*
-     * a. Method Name: testcase3
-     * b. Author Name: Muralidhar
-     * c. Description: It contains all the methods.
-     * d. Parameter: None
-     * e. Return Type: void
-     */
-    public void testcase3(){
-        hoverOnRacketSports();
-        clickonShopSportswear();
-        verifyURLClothing();
-        clickonListView();
-        clickonCompare1();
-        verifyYouaddedproducttothecomparisonlist();
-        clickonCompare2();
-        verifyComapre2();
-        clickonCompareProductList();
-        verifyCompareProducts();
-        clickOnX1();
-        clickOnOK1();
-        verifyOk1();
-        clickOnx2();
-        clickOnOk2();
-        verifyOK2();
-        verifyMessage();
-    }
+    
 
 
 }

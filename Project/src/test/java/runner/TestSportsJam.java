@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "features", glue = "stepdefinition"
+		features = "features", glue = "stepdefinition", tags = "@test3"
 		)
 
 public class TestSportsJam {
