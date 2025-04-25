@@ -1,6 +1,10 @@
 package pages;
 
 
+
+
+
+
 import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -11,8 +15,10 @@ import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class ShopSportsPage {
-    public ExtentTest test;
-    public WebDriverHelper helper;
+
+    ExtentTest test;
+    WebDriverHelper helper;
+    
     public ShopSportsPage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver, test);
     }

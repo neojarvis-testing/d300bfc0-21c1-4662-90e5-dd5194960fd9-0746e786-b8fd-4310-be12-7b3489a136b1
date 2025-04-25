@@ -11,7 +11,8 @@ import utils.Reporter;
 
 public class Hooks extends Base{
 
-	static ExtentReports reports;
+	public static ExtentReports reports;
+
 	@BeforeAll
 	public static void openReport()
 	{

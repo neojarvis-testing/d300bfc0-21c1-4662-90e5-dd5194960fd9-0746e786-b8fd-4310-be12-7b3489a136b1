@@ -1,7 +1,5 @@
 package pages;
 
-
-
 import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
