@@ -35,6 +35,7 @@ public class ProtectiveGearPageSteps {
     }
     @When("I click on Batting Leg Guards d.")
     public void i_click_on_batting_leg_guards_d() {
+        page.hoveredOnProtectiveGear();
         page.clickOnBattingLegGuards();
     }
     @When("I verify the URL for Batting Leg Guards d.")
