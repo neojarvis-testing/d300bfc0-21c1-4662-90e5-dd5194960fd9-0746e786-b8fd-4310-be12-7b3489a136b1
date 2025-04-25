@@ -8,6 +8,8 @@ import uistore.SportsJamBrandPageLocators;
 import uistore.SportsJamCustomerLoginLocators;
 import uistore.SportsJamHomePageLocators;
 import utils.ExcelReader;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamPumaWomenSportsPage {
@@ -155,6 +157,8 @@ public class SportsJamPumaWomenSportsPage {
         String text = webDriverHelper.getText(PumaProductPageLocators.accessoriesText, "Retrieved Accessories text from element");
         // System.out.println(text);
         webDriverHelper.checkAssert(text.toLowerCase(), ExcelReader.getCellData("AssertContainsData",1,0), "Checked if text contains accessories");
+        Screenshot.captureScreenShot("text");
+        Reporter.attachScreenshotToReport("text",test,"");
     }
 
     /*
