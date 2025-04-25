@@ -241,33 +241,4 @@ public class SportsJamAdidasResultsPage {
     public void clickClearAllButton(){
         helper.clickOnElement(SportsJamAdidasResultsPageLocator.clearAllButton, "Clicked on Clear All button");
     }
-
-    // /*
-    //  * a. Method Name: adidasProductsFilter
-    //  * b. Author Name: Tanishk Maheshwari
-    //  * c. Description: This will be used to integrate all the methods in a single method which will be called in the runner.
-    //  * d. Parameter: None
-    //  * e. Return Type: void
-    //  */
-    // public void adidasProductsFilter(){
-    //     clickOnSearchIcon();
-    //     verifySearchBar();
-    //     clickOnSearchBar();
-    //     sendDataInSearchBar();
-    //     clickOnGoButton();
-    //     pressEnter();
-    //     verifyAdidasInHeading();
-    //     selectCheckboxOfRacketSports();
-    //     verifyRacketSportsLabel();
-    //     selectCheckboxOfShoes();
-    //     verifyShoesLabel();
-    //     deSelectCheckboxOfRacketSports();
-    //     selectCheckboxOfClothing();
-    //     verifyClothingLabel();
-    //     selectCheckboxOfAccessories();
-    //     verifyAccessoriesLabel();
-    //     selectCheckboxOfRunning();
-    //     verifyRunningLabel();
-    //     clickClearAllButton();
-    // }
 }

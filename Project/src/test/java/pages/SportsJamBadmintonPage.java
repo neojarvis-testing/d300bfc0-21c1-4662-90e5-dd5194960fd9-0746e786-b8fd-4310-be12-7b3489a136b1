@@ -273,37 +273,4 @@ public class SportsJamBadmintonPage {
     public void clickOnAddToCartButtonInPage(){
         helper.clickOnElement(SportsJamBadmintonShoesResultsPageLocator.addToCartButton, "Clicked on add to cart button");
     }
-    
-    // /*
-    //  * a. Method Name: addProductsToCart
-    //  * b. Author Name: Tanishk Maheshwari
-    //  * c. Description: This will be used to integrate all the methods in a single method which will be called in the runner.
-    //  * d. Parameter: None
-    //  * e. Return Type: void
-    //  */
-    // public void addProductsToCart(){
-    //     hoverOnRacketSports();
-    //     clickOnBadmintonRackets();
-    //     verifyBadmintonRackets();
-    //     clickOnProductNumberOne();
-    //     verifyProductPage();
-    //     verifyAddToCartButton();
-    //     clickOnIncreaseQuantityButton();
-    //     clickOnAddToCartButton();
-    //     verifyConfirmationMessageInPopUp();
-    //     clickOnCheckButton();
-    //     verifyZIPCodeError();
-    //     clickOnZipCodeInputBox();
-    //     sendInputInZIPCodeInputBox();
-    //     clickOnCheckButton();
-    //     hoverOnRacketSports();
-    //     clickOnBadmintonShoes();
-    //     verifyBadmintonShoes();
-    //     clickOnProductNumberOneInPage();
-    //     clickOnSize5();
-    //     clickOnAddToCartButtonInPage();
-    //     verifyErrorMessage();
-    //     clickOnSize10();
-    //     clickOnAddToCartButtonInPage();
-    // }
 }
