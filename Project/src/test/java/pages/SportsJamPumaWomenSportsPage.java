@@ -157,7 +157,7 @@ public class SportsJamPumaWomenSportsPage {
         webDriverHelper.checkAssert(text.toLowerCase(), ExcelReader.getCellData("AssertContainsData",1,0), "Checked if text contains accessories");
     }
 
-    /*
+    /* 
      * a. MethodName: hoverOverPumaWomenSportQuartersAssorted
      * b. AuthorName: Sharath
      * c. Description: This code hovers over first product
