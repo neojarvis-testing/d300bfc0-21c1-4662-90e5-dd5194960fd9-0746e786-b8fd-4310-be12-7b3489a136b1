@@ -1,4 +1,4 @@
-@test1
+@test9
 Feature: Testing WOmen Sports Shoes page of SportsJam
 	Scenario: womens shoes page test
 	    When I verify the homepage URL

@@ -11,7 +11,7 @@ import utils.Reporter;
 
 public class Hooks extends Base{
 
-	static ExtentReports reports;
+	public static ExtentReports reports;
 
 	/*
      * a. Method Name: openReport
