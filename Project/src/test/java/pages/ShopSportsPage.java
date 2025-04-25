@@ -20,7 +20,8 @@ public class ShopSportsPage {
     WebDriverHelper helper;
     
     public ShopSportsPage(ExtentTest test){
-        helper=new WebDriverHelper(Base.driver, test);
+        helper=new WebDriverHelper(Base.driver,test);
+        this.test=test;
     }
     /*
      * a. Method Name: hoverOnRacketSports

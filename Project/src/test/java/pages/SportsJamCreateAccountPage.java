@@ -9,6 +9,7 @@ import uistore.SportsJamCreateAccountPageLocators;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamCreateAccountPage {
@@ -17,6 +18,7 @@ public class SportsJamCreateAccountPage {
     String excelCreateAccountSheet = "CreateAccountPage";
     public SportsJamCreateAccountPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver, test);
+        this.test=test;
     }
 
     /*
@@ -188,6 +190,7 @@ public class SportsJamCreateAccountPage {
     public void clickOnLogout(){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.logout,"Clicked on logout");
+            Screenshot.captureScreenShot("logout");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
