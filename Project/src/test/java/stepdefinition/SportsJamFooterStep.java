@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import pages.SportsJamFooterPage;
 
 public class SportsJamFooterStep {
-    ExtentTest extentTest= Hooks.reports.createTest("LoginTestCase");
+    ExtentTest extentTest= Hooks.reports.createTest("FooterTestCase");
     SportsJamFooterPage sportsJamFooterPage=new SportsJamFooterPage(extentTest);
     /*
      * a. Method Name: clickOnFacebook
