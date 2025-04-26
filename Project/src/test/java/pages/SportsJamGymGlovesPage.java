@@ -205,6 +205,8 @@ public class SportsJamGymGlovesPage {
             helper.waitForElementToBeVisible(SportsJamGymGlovesLocators.nameInCart, 10);
             String data = helper.getText(SportsJamGymGlovesLocators.nameInCart, "Verified name in cart");
             Assert.assertEquals(data, "EVERLAST MENS UNIVERSAL FIT GLOVES (SIZE M&L, BLUE)");
+            Screenshot.captureScreenShot("Shopping cart");
+            Reporter.attachScreenshotToReport("Shopping cart", test, "Shopping cart product");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }

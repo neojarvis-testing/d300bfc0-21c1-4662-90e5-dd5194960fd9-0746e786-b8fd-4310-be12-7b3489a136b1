@@ -6,6 +6,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.ProtectiveGearPage;
 import utils.Base;
+import utils.Reporter;
+import utils.Screenshot;
 
 public class ProtectiveGearPageSteps {
     ExtentTest test=Hooks.reports.createTest("Protective");
@@ -71,6 +73,7 @@ public class ProtectiveGearPageSteps {
     @When("I verify the URL for Wicket Keeping Leg Guards d.")
     public void i_verify_the_url_for_wicket_keeping_leg_guards_d() {
         page.verifyWicketKeepingLegGuardURL();
+        
     }
     @When("I verify Wicket Keeping Leg Guards d.")
     public void i_verify_wicket_keeping_leg_guards_d() {
@@ -82,10 +85,13 @@ public class ProtectiveGearPageSteps {
     public void i_click_on_cricket_helmets_d() {
         page.hoveredOnProtectiveGear();
         page.clickonCricketHelmets();
+        Reporter.attachScreenshotToReport("lala", test, "Attached");
+        Reporter.attachScreenshotToReport("la", test, "Attached");
     }
     @When("I verify the URL for Cricket Helmets d.")
     public void i_verify_the_url_for_cricket_helmets_d() {
         page.verifyCricketHelmetsURL();
+        Reporter.attachScreenshotToReport("laa", test, "Attached");
     }
     @When("I verify Cricket Helmets d.")
     public void i_verify_cricket_helmets_d() {
@@ -105,5 +111,6 @@ public class ProtectiveGearPageSteps {
     @Then("I verify Inner Thigh Pads d.")
     public void i_verify_inner_thigh_pads_d() {
         page.verifyInnerThighPads();
+
     }
 }

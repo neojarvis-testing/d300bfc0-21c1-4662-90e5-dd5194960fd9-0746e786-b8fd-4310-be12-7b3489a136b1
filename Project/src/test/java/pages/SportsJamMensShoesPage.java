@@ -7,8 +7,6 @@ import com.aventstack.extentreports.ExtentTest;
 import uistore.SportsJamBadmintonShoesPage;
 import uistore.SportsJamHomePageLocators;
 import utils.ExcelReader;
-import utils.Reporter;
-import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamMensShoesPage {
@@ -119,8 +117,6 @@ public class SportsJamMensShoesPage {
      */
     public void clickOnFootBall() {
         webDriverHelper.clickOnElement(SportsJamBadmintonShoesPage.footballShoes, "click on football");
-        Screenshot.captureScreenShot("clicked on football");
-        Reporter.attachScreenshotToReport("Clicked on football", test, "Clicked on football");
     }
 
     /*

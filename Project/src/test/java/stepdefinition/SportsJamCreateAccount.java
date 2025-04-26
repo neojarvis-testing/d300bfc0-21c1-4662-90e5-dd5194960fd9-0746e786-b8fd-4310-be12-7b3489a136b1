@@ -23,25 +23,25 @@ public class SportsJamCreateAccount {
     public void i_click_on_create_an_account_c() {
         sportsJamCreateAccountPage.clickOnCreateAccount();
     }
-    @When("I send value in Firstname c.")
-    public void i_send_value_in_firstname_c() {
-        sportsJamCreateAccountPage.sendInFirstName();
+    @When("I send value to FirstName field as {string} c.")
+    public void i_send_value_to_first_name_field_as_c(String string) {
+        sportsJamCreateAccountPage.sendInFirstName(string);
     }
-    @When("I send value in Lastname c.")
-    public void i_send_value_in_lastname_c() {
-        sportsJamCreateAccountPage.sendInLastName();
+    @When("I send value to LastName fied as {string} c.")
+    public void i_send_value_to_last_name_fied_as_c(String string) {
+        sportsJamCreateAccountPage.sendInLastName(string);
     }
-    @When("I send value in email c.")
-    public void i_send_value_in_email_c() {
-        sportsJamCreateAccountPage.sendInEmail();
+    @When("I send value to email field as {string} c.")
+    public void i_send_value_to_email_field_as_c(String string) {
+        sportsJamCreateAccountPage.sendInEmail(string);
     }
-    @When("I send value in password c.")
-    public void i_send_value_in_password_c() {
-        sportsJamCreateAccountPage.sendInPassword();
+    @When("I send value to password field as {string} c.")
+public void i_send_value_to_password_field_as_c(String string) {
+        sportsJamCreateAccountPage.sendInPassword(string);
     }
-    @When("I send value in confirm password c.")
-    public void i_send_value_in_confirm_password_c() {
-        sportsJamCreateAccountPage.sendInConfirmPassword();
+    @When("I send value to confirm password field as {string} c.")
+    public void i_send_value_to_confirm_password_field_as_c(String string) {
+        sportsJamCreateAccountPage.sendInConfirmPassword(string);
     }
     @When("I click on create an account button c.")
     public void i_click_on_create_an_account_button_c() {
@@ -59,13 +59,13 @@ public class SportsJamCreateAccount {
     public void i_navigate_back_to_previous_page() {
         sportsJamCreateAccountPage.backNavigate();
     }
-    @When("I send value in Email in login page c.")
-    public void i_send_value_in_email_in_login_page_c() {
-        sportsJamCreateAccountPage.sendInLoginEmail();
+    @When("I send value to login email field as {string} in login page c.")
+public void i_send_value_to_login_email_field_as_in_login_page_c(String string) {
+        sportsJamCreateAccountPage.sendInLoginEmail(string);
     }
-    @When("I send value in password in login page c.")
-    public void i_send_value_in_password_in_login_page_c() {
-        sportsJamCreateAccountPage.sendInLoginPassword();
+    @When("I send value to login password field as {string} in login page c.")
+public void i_send_value_to_login_password_field_as_in_login_page_c(String string) {
+        sportsJamCreateAccountPage.sendInLoginPassword(string);
     }
     @Then("I verify Error message c.")
     public void i_verify_error_message_c() {
