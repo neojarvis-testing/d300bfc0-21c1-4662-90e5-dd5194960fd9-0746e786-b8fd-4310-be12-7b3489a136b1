@@ -7,15 +7,18 @@ import com.aventstack.extentreports.ExtentTest;
 import uistore.SportsJamBadmintonShoesPage;
 import uistore.SportsJamHomePageLocators;
 import utils.ExcelReader;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamMensShoesPage {
 
     WebDriverHelper webDriverHelper;
-    
+    ExtentTest test;
     public SportsJamMensShoesPage(WebDriver driver, ExtentTest test)
     {
         webDriverHelper = new WebDriverHelper(driver, test);
+        this.test = test;
     }
         
     /*
@@ -116,6 +119,8 @@ public class SportsJamMensShoesPage {
      */
     public void clickOnFootBall() {
         webDriverHelper.clickOnElement(SportsJamBadmintonShoesPage.footballShoes, "click on football");
+        Screenshot.captureScreenShot("clicked on football");
+        Reporter.attachScreenshotToReport("Clicked on football", test, "Clicked on football");
     }
 
     /*
@@ -183,6 +188,6 @@ public class SportsJamMensShoesPage {
     public void verifySquashShoesPage() {
         webDriverHelper.verifyPageUrl(ExcelReader.getCellData("PageURLS", 6, 2),"Squash Shoes Page verified");
 
-        webDriverHelper.takeScreenshot("Squash Shoes", "screenshot caputres for shoes page");
+        webDriverHelper.takeScreenshot("squash", "screenshot caputres for shoes page");
     }
 }

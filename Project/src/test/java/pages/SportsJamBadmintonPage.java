@@ -30,6 +30,8 @@ public class SportsJamBadmintonPage {
      */
     public void hoverOnRacketSports(){
         helper.hoverOverElement(SportsJamHomePageLocator.racketSports, "Hovered on Racket Sports");
+        Screenshot.captureScreenShot("Hovered on Racket Sports");
+        Reporter.attachScreenshotToReport("Hovered on Racket Sports",test,"");
     }
 
     /*
@@ -87,6 +89,8 @@ public class SportsJamBadmintonPage {
         String text = helper.getText(SportsJamBadmintonRacketsResultsPageLocator.headingProductNumberOne, "Product heading retrieved");
         LoggerHandler.info(text);
         helper.checkAssert(text, ExcelReader.getCellData("AssertData", 8, 0), "Product heading verified");
+        Screenshot.captureScreenShot("text");
+        Reporter.attachScreenshotToReport("text",test,"");
     }
 
     /*
