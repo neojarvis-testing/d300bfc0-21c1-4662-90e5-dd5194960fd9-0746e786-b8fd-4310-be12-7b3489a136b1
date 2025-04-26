@@ -180,7 +180,6 @@ public class Reporter extends Base {
             
         } catch (IOException e) {
             LoggerHandler.info(e.getMessage());
-            
         }
         final String senderEmail = prop.getProperty("senderemail"); 
         final String senderPassword = prop.getProperty("senderpassword");   
