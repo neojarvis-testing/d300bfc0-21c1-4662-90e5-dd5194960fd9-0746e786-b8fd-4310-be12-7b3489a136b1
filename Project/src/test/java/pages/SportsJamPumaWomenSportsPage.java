@@ -91,6 +91,8 @@ public class SportsJamPumaWomenSportsPage {
     public void clickOnSearchIcon() 
     {
         webDriverHelper.clickOnElement(SportsJamBrandPageLocators.searchIcon, "Clicked on search icon");
+        Screenshot.captureScreenShot("clicked_search");
+        Reporter.attachScreenshotToReport("clicked_search",test,"clicked_search");
     }
 
     /*

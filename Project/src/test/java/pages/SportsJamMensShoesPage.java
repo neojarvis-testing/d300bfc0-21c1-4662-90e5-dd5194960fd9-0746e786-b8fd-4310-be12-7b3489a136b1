@@ -184,6 +184,6 @@ public class SportsJamMensShoesPage {
     public void verifySquashShoesPage() {
         webDriverHelper.verifyPageUrl(ExcelReader.getCellData("PageURLS", 6, 2),"Squash Shoes Page verified");
 
-        webDriverHelper.takeScreenshot("Squash Shoes", "screenshot caputres for shoes page");
+        webDriverHelper.takeScreenshot("squash", "screenshot caputres for shoes page");
     }
 }
