@@ -9,6 +9,8 @@ import uistore.SportsJamCreateAccountPageLocators;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamCreateAccountPage {
@@ -17,6 +19,7 @@ public class SportsJamCreateAccountPage {
     String excelCreateAccountSheet = "CreateAccountPage";
     public SportsJamCreateAccountPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver, test);
+        this.test = test;
     }
 
     /*
@@ -141,6 +144,8 @@ public class SportsJamCreateAccountPage {
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.confirmPassword, "Clicked on ");
             helper.sendData(SportsJamCreateAccountPageLocators.confirmPassword,  ExcelReader.getCellData(excelCreateAccountSheet, 2, 1), "Sent value to confirmpassword");
+            Screenshot.captureScreenShot("account details");
+            Reporter.attachScreenshotToReport("account details", test, "Account details of created account");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
