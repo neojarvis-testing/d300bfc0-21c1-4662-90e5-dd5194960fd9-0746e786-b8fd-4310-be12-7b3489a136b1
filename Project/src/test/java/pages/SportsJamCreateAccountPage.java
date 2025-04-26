@@ -193,6 +193,7 @@ public class SportsJamCreateAccountPage {
     public void clickOnLogout(){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.logout,"Clicked on logout");
+            Screenshot.captureScreenShot("logout");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
