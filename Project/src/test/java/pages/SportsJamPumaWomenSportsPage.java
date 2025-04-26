@@ -8,6 +8,8 @@ import uistore.SportsJamBrandPageLocators;
 import uistore.SportsJamCustomerLoginLocators;
 import uistore.SportsJamHomePageLocators;
 import utils.ExcelReader;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamPumaWomenSportsPage {

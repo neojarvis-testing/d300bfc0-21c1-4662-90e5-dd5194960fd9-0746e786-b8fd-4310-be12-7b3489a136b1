@@ -4,7 +4,10 @@ import com.aventstack.extentreports.ExtentTest;
 
 import uistore.SportsJamFooterLocators;
 import utils.Base;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
+
 
 public class SportsJamFooterPage {
     public  WebDriverHelper helper;
