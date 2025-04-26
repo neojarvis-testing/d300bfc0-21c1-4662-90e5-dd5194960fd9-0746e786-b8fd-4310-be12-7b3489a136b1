@@ -61,8 +61,8 @@ public class SportsJamAdidasResultsPage {
      * d. Parameter: None
      * e. Return Type: void
      */
-    public void sendDataInSearchBar(){
-        helper.sendData(SportsJamHomePageLocator.searchBar, ExcelReader.getCellData("SearchBarData", 0, 0), "Input sent");
+    public void sendDataInSearchBar(String brandName){
+        helper.sendData(SportsJamHomePageLocator.searchBar, brandName, "Input sent");
     }
 
     /*

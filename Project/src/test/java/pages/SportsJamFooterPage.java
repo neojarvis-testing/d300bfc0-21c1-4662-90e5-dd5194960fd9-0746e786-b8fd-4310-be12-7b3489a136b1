@@ -74,12 +74,6 @@ public class SportsJamFooterPage {
     {
         helper.switchBackTowindow(0);
     }
-    public void switchtest()
-    {
-        clickOnFacebook();
-        backFromFaceBook();
-        clickOnYouTube();
-        backfromYouTube();
-    }
+    
 }
 

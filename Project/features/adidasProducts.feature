@@ -6,7 +6,7 @@ Feature: Checking functionality of filters in adidas products page.
         When I click on the search icon a
         And I verify the search bar is displayed a
         And I click on the search bar a
-        And I enter input in the search bar a
+        And I enter input "ADIDAS" in the search bar a
         And I click the Go button a
         And I press Enter a
         And I verify the heading a

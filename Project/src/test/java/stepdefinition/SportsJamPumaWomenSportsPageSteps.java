@@ -32,10 +32,10 @@ public class SportsJamPumaWomenSportsPageSteps {
 	    jamPumaWomenSportsPage.clickOnSearchBar();
 	    
 	}
-	@When("I send data to the search bar")
-	public void i_send_data_to_the_search_bar() {
+	@When("I send data {string} to the search bar")
+	public void i_send_data_to_the_search_bar(String string) {
 	    
-	    jamPumaWomenSportsPage.sendDataToSearchBar();
+	    jamPumaWomenSportsPage.sendDataToSearchBar(string);
 	}
 	@When("I click on the search icon")
 	public void i_click_on_the_search_icon() {
@@ -92,20 +92,22 @@ public class SportsJamPumaWomenSportsPageSteps {
 	    jamPumaWomenSportsPage.verifyLoginPromptMessage();
 	    
 	}
-	@Then("I input data into the email field")
-	public void i_input_data_into_the_email_field() {
+	@Then("I input data {string} into the email field")
+	public void i_input_data_into_the_email_field(String string) {
 	    
-	    jamPumaWomenSportsPage.clickAndSendDataToEmail();
+	    jamPumaWomenSportsPage.clickAndSendDataToEmail(string);
 	}
 	
-	@Then("I input data into the password field")
-	public void i_input_data_into_the_password_field() {
-	    jamPumaWomenSportsPage.clickAndSendDataToPassword();
+	@Then("I input data {string} into the password field")
+	public void i_input_data_into_the_password_field(String string) {
+	    jamPumaWomenSportsPage.clickAndSendDataToPassword(string);
 	}
+
 	@Then("I click on the Sign In button")
 	public void i_click_on_the_sign_in_button() {
 	   jamPumaWomenSportsPage.clickOnSignIn();
 	}
+	
 	@Then("I verify the error message is displayed")
 	public void i_verify_the_error_message_is_displayed() {
 	   jamPumaWomenSportsPage.verifyTheErrorMessage();

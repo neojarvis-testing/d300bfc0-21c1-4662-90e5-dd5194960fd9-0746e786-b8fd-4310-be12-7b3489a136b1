@@ -15,7 +15,7 @@ Feature: Checking functionality for adding products to cart and delivery at the 
         And I click on the Check button a
         And I verify ZIP Code error a
         And I click on the ZIP Code input box a
-        And I enter the ZIP Code a
+        And I enter the ZIP Code "641001" a
         And I click on the Check button a 2nd time
         And I hover on Racket Sports a
         And I click on Badminton Shoes a

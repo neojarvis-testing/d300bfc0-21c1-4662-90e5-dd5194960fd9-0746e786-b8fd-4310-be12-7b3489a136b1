@@ -182,8 +182,8 @@ public class SportsJamBadmintonPage {
      * d. Parameter: None
      * e. Return Type: void
      */
-    public void sendInputInZIPCodeInputBox(){
-        helper.sendData(SportsJamBadmintonRacketsResultsPageLocator.zipCode, ExcelReader.getCellData("InputData", 0, 0), "Input sent");
+    public void sendInputInZIPCodeInputBox(String zipCode){
+        helper.sendData(SportsJamBadmintonRacketsResultsPageLocator.zipCode, zipCode, "Input sent");
     }
 
     /*
