@@ -78,9 +78,9 @@ public class SportsJamPumaWomenSportsPage {
      * d. Parameters: None
      * e. ReturnType: None
      */
-    public void sendDataToSearchBar() 
+    public void sendDataToSearchBar(String brand) 
     {
-        webDriverHelper.sendData(SportsJamBrandPageLocators.searchBar,ExcelReader.getCellData("DataToBeSent",0,0), "Sent Puma to searchbar");
+        webDriverHelper.sendData(SportsJamBrandPageLocators.searchBar,brand, "Sent Puma to searchbar");
     }
 
     /*
@@ -244,11 +244,11 @@ public class SportsJamPumaWomenSportsPage {
      * d. Parameters: None
      * e. ReturnType: None
      */
-    public void clickAndSendDataToEmail() 
+    public void clickAndSendDataToEmail(String email) 
     {
         // ExcelReader.getCellData("CustomerLogin",0,0);
         webDriverHelper.clickOnElement(SportsJamCustomerLoginLocators.email, "Clicked On email");
-        webDriverHelper.sendData(SportsJamCustomerLoginLocators.email,ExcelReader.getCellData("DataToBeSent", 1, 0),"Sent email to input field");
+        webDriverHelper.sendData(SportsJamCustomerLoginLocators.email,email,"Sent email to input field");
     }
 
     /*
@@ -258,11 +258,11 @@ public class SportsJamPumaWomenSportsPage {
      * d. Parameters: None
      * e. ReturnType: None
      */
-    public void clickAndSendDataToPassword() 
+    public void clickAndSendDataToPassword(String password) 
     {
         // ExcelReader.getCellData("CustomerLogin",1,0);
         webDriverHelper.clickOnElement(SportsJamCustomerLoginLocators.password, "Clicked On password");
-        webDriverHelper.sendData(SportsJamCustomerLoginLocators.password, ExcelReader.getCellData("DataToBeSent", 2, 0), "Sent data to password field");
+        webDriverHelper.sendData(SportsJamCustomerLoginLocators.password, password , "Sent data to password field");
     }
 
     /*
@@ -291,6 +291,7 @@ public class SportsJamPumaWomenSportsPage {
         webDriverHelper.checkAssert(text, ExcelReader.getCellData("AssertContainsData",3,0), "Verified Text form element");
 
         webDriverHelper.takeScreenshot("PumaWomen Page","captured screenshot for puma women shoes page");
+        Reporter.attachBase64ScreenshotToReport("PumaWomen Page", test, "");
     }
 
 

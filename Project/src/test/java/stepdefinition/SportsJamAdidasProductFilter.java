@@ -53,9 +53,9 @@ public class SportsJamAdidasProductFilter {
      * d. Parameters: None
      * e. Return Type: None
      */
-    @When("I enter input in the search bar a")
-    public void i_enter_input_in_the_search_bar_a() {
-        sportsJamAdidasResultsPage.sendDataInSearchBar();
+    @When("I enter input {string} in the search bar a")
+public void i_enter_input_in_the_search_bar_a(String string) {
+        sportsJamAdidasResultsPage.sendDataInSearchBar(string);
     }
 
     /*

@@ -169,7 +169,7 @@ public class Reporter extends Base {
      * Parameters:recipient,subject,reportFilePath
      * Return Type:void
      */
-    public static void sendEmail(String recipient, String subject, String reportFilePath) {
+    public static void sendEmail(String recipient, String subject) {
             String propertiesPath = System.getProperty("user.dir") + "/config/config.properties";
             FileInputStream file;
            Properties prop = null;
@@ -202,7 +202,7 @@ public class Reporter extends Base {
                 MimeBodyPart textPart = new MimeBodyPart();
                 textPart.setText("Please find the attached report.");
                 MimeBodyPart filePart = new MimeBodyPart();
-                filePart.attachFile(new File(reportFilePath));
+                filePart.attachFile(new File(report));
                 Multipart multipart = new MimeMultipart();
                 multipart.addBodyPart(textPart);
                 multipart.addBodyPart(filePart);

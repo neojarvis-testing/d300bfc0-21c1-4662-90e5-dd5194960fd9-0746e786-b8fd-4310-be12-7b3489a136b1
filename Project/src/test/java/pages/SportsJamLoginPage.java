@@ -200,22 +200,4 @@ public class SportsJamLoginPage {
     {
         helper.navigateBack("Navigated back from Returns page");
     }
-    public void testlogin()
-    {
-        clickOnLogin();
-        verifyLogin();
-        backFromLogin();
-        clickOnDelivery();
-        verifyDelivery();
-        backFromDelivery();
-        clickOnPayment();
-        verifyPayment();
-        backFromPayment();
-        clickOnFAQ();
-        verifyFAQ();
-        backFromFAQ();
-        clickOnPolicy();
-        verifyPolicy();
-        backFromPolicy();
-    }
 }

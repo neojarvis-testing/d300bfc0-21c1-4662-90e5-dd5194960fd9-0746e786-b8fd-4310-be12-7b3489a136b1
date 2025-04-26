@@ -21,7 +21,7 @@ public class SportsJamCreateAccountPage {
         helper = new WebDriverHelper(Base.driver, test);
         this.test = test;
     }
-
+  
     /*
      * a. MethodName: hoverOnLogin
      * b. AuthorName: Gagandeep Kanta
@@ -75,11 +75,11 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInFirstName(){
+    public void sendInFirstName(String fName){
         try {
             Thread.sleep(2000);
             helper.clickOnElement(SportsJamCreateAccountPageLocators.firstName, "Clicked on Firstname");
-            helper.sendData(SportsJamCreateAccountPageLocators.firstName, ExcelReader.getCellData(excelCreateAccountSheet, 0, 0), "Sent value to firstname");
+            helper.sendData(SportsJamCreateAccountPageLocators.firstName,fName , "Sent value to firstname");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -92,10 +92,10 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInLastName(){
+    public void sendInLastName(String lName){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.lastName, "Clicked on ");
-            helper.sendData(SportsJamCreateAccountPageLocators.lastName, ExcelReader.getCellData(excelCreateAccountSheet, 1, 0), "Sent value to last name");
+            helper.sendData(SportsJamCreateAccountPageLocators.lastName, lName , "Sent value to last name");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -108,10 +108,10 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInEmail(){
+    public void sendInEmail(String email){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.email, "Clicked on email");
-            helper.sendData(SportsJamCreateAccountPageLocators.email,  ExcelReader.getCellData(excelCreateAccountSheet, 0, 1), "Sent value to email");
+            helper.sendData(SportsJamCreateAccountPageLocators.email, email, "Sent value to email");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -124,10 +124,10 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInPassword(){
+    public void sendInPassword(String passwordData){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.password, "Clicked on password");
-            helper.sendData(SportsJamCreateAccountPageLocators.password,  ExcelReader.getCellData(excelCreateAccountSheet, 1, 1), "Sent value to password");
+            helper.sendData(SportsJamCreateAccountPageLocators.password, passwordData , "Sent value to password");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -140,10 +140,10 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInConfirmPassword(){
+    public void sendInConfirmPassword(String passwordData){
         try {
             helper.clickOnElement(SportsJamCreateAccountPageLocators.confirmPassword, "Clicked on ");
-            helper.sendData(SportsJamCreateAccountPageLocators.confirmPassword,  ExcelReader.getCellData(excelCreateAccountSheet, 2, 1), "Sent value to confirmpassword");
+            helper.sendData(SportsJamCreateAccountPageLocators.confirmPassword, passwordData , "Sent value to confirmpassword");
             Screenshot.captureScreenShot("account details");
             Reporter.attachScreenshotToReport("account details", test, "Account details of created account");
         } catch (Exception e) {
@@ -220,9 +220,9 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInLoginEmail(){
+    public void sendInLoginEmail(String email){
         try {
-            helper.sendData(SportsJamCreateAccountPageLocators.loginEmail, "test134@gmail.com", "Sent email in Login page");
+            helper.sendData(SportsJamCreateAccountPageLocators.loginEmail, email, "Sent email in Login page");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -235,9 +235,9 @@ public class SportsJamCreateAccountPage {
      * d. Parameters: None
      * e. Return Type: void
      */
-    public void sendInLoginPassword(){
+    public void sendInLoginPassword(String password){
         try {
-            helper.sendData(SportsJamCreateAccountPageLocators.loginPassword, "test140@ga", "Sent password in Login page");
+            helper.sendData(SportsJamCreateAccountPageLocators.loginPassword, password, "Sent password in Login page");
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }
@@ -269,36 +269,6 @@ public class SportsJamCreateAccountPage {
         try {
             String data = helper.getText(SportsJamCreateAccountPageLocators.errorMessage, "Verified Error Message");
             Assert.assertTrue(data.contains( "THE ACCOUNT SIGN-IN WAS INCORRECT OR YOUR ACCOUNT IS DISABLED"));
-        } catch (Exception e) {
-            LoggerHandler.info(e.getMessage());
-        }
-    }
-
-    /*
-     * a. MethodName: runCreateAccountPage
-     * b. AuthorName: Gagandeep Kanta
-     * c. Description: This is used to call and run the above methods in order.
-     * d. Parameters: None
-     * e. Return Type: void
-     */
-    public void runCreateAccountPage(){
-        try {
-            hoverOnLogin();
-            clickOnLogin();
-            clickOnCreateAccount();
-            sendInFirstName();
-            sendInLastName();
-            sendInEmail();
-            sendInPassword();
-            sendInConfirmPassword();
-            clickOnCreate();
-            verifyThankYou();
-            clickOnLogout();
-            backNavigate();
-            sendInLoginEmail();
-            sendInLoginPassword();
-            clickOnSignIn();
-            verifyErrorMessage();
         } catch (Exception e) {
             LoggerHandler.info(e.getMessage());
         }

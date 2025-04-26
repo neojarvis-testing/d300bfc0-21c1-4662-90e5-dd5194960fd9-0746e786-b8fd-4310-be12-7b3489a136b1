@@ -161,9 +161,9 @@ public class SportsJamBadmintonProducts {
      * d. Parameters: None
      * e. Return Type: None
      */
-    @Then("I enter the ZIP Code a")
-    public void i_enter_the_zip_code_a() {
-        sportsJamBadmintonPage.sendInputInZIPCodeInputBox();
+    @Then("I enter the ZIP Code {string} a")
+    public void i_enter_the_zip_code_a(String string) {
+        sportsJamBadmintonPage.sendInputInZIPCodeInputBox(string);
     }
 
     /*
