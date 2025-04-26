@@ -331,7 +331,7 @@ public class WebDriverHelper {
 
 	public void takeScreenshot(String filename,String description)
 	{
-		Screenshot.TakeScreenshot(filename);
+		Screenshot.captureScreenShot(filename);
         Reporter.attachScreenshotToReport(filename, test, description);
 	}
 }
