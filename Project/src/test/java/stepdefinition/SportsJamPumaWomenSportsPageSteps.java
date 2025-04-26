@@ -9,7 +9,7 @@ import utils.Base;
 
 public class SportsJamPumaWomenSportsPageSteps {
 	
-	ExtentTest test = Hooks.reports.createTest("test8");
+	ExtentTest test = Hooks.reports.createTest("SportsJamPumaWomenSports");
 	SportsJamPumaWomenSportsPage jamPumaWomenSportsPage = new SportsJamPumaWomenSportsPage(Base.driver, test); 
 
 	@When("I verify the homepage URL")
