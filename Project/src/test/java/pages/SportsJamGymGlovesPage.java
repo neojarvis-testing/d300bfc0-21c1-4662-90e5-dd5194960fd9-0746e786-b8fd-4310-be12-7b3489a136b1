@@ -16,6 +16,7 @@ public class SportsJamGymGlovesPage {
     WebDriverHelper helper;
     public SportsJamGymGlovesPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver, test);
+        this.test=test;
     }
     
     /*

@@ -7,6 +7,8 @@ import uistore.SportsJamHomePageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
+import utils.Screenshot;
 import utils.WebDriverHelper;
 
 public class SportsJamAdidasResultsPage {
@@ -108,6 +110,11 @@ public class SportsJamAdidasResultsPage {
      * e. Return Type: void
      */
     public void selectCheckboxOfRacketSports(){
+        try {
+            Thread.sleep(1200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         helper.clickOnElement(SportsJamAdidasResultsPageLocator.filterCategoryRacketSports, "Selected Racket Sports");
     }
 

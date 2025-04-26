@@ -17,6 +17,7 @@ public class SportsJamCreateAccountPage {
     String excelCreateAccountSheet = "CreateAccountPage";
     public SportsJamCreateAccountPage(ExtentTest test){
         helper = new WebDriverHelper(Base.driver, test);
+        this.test=test;
     }
 
     /*

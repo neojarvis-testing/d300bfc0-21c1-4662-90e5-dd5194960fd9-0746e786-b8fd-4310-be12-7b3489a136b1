@@ -8,6 +8,7 @@ import uistore.SportsJamHomePageLocator;
 import utils.Base;
 import utils.ExcelReader;
 import utils.LoggerHandler;
+import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
@@ -40,6 +41,8 @@ public class SportsJamBadmintonPage {
      */
     public void clickOnBadmintonRackets(){
         helper.clickOnElement(SportsJamHomePageLocator.badmintonRackets, "Clicked on Badminton Rackets");
+        Screenshot.captureScreenShot("Clicked on Badminton Rackets");
+        Reporter.attachScreenshotToReport("Clicked on Badminton Rackets", test, "Screenshot attached");
     }
 
     /*
@@ -66,6 +69,8 @@ public class SportsJamBadmintonPage {
         try {
             Thread.sleep(2000);
             helper.clickOnElement(SportsJamBadmintonRacketsResultsPageLocator.productNumberOne, "Clicked on product");
+            Screenshot.captureScreenShot("Clicked on product one");
+        Reporter.attachScreenshotToReport("Clicked on product one", test, "Screenshot attached");
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -106,6 +111,8 @@ public class SportsJamBadmintonPage {
      */
     public void clickOnIncreaseQuantityButton(){
         helper.clickOnElement(SportsJamBadmintonRacketsResultsPageLocator.increaseQuantity, "Clicked on increase quantity button");
+        Screenshot.captureScreenShot("Increase Quantity Button");
+        Reporter.attachScreenshotToReport("Increase Quantity Button", test, "Screenshot attached");
     }
 
     /*
@@ -117,6 +124,8 @@ public class SportsJamBadmintonPage {
      */
     public void clickOnAddToCartButton(){
         helper.clickOnElement(SportsJamBadmintonRacketsResultsPageLocator.addToCartButton, "Clicked on add to cart button");
+        Screenshot.captureScreenShot("Clicked on add to cart button");
+        Reporter.attachScreenshotToReport("Clicked on add to cart button", test, "Screenshot attached");
     }
 
     /*
