@@ -63,6 +63,6 @@ public class Hooks extends Base{
 	public static void closeReport()
 	{
 		reports.flush();
-		Reporter.sendEmail("sharathj886@gmail.com","SportsaJam Report");
+		Reporter.sendEmail("tanishk24072000@gmail.com","SportsaJam Report");
 	}
 }
