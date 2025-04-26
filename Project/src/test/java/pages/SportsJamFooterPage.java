@@ -8,6 +8,7 @@ import utils.Reporter;
 import utils.Screenshot;
 import utils.WebDriverHelper;
 
+
 public class SportsJamFooterPage {
     public  WebDriverHelper helper;
     public ExtentTest test;
@@ -60,8 +61,6 @@ public class SportsJamFooterPage {
         helper.jsScrollUsingPixel(0, 10000, "Scrolled to youtube");
         helper.clickOnElement(SportsJamFooterLocators.youtubeIcon, "Clicked on youtube");
         helper.switchToNewWindow();
-        Screenshot.captureScreenShot("scrolled to youutbe");
-        Reporter.attachScreenshotToReport("scrolled to youutbe",test,"");
     }
     /*
      * a. Method Name: backfromYouTube
@@ -74,12 +73,6 @@ public class SportsJamFooterPage {
     {
         helper.switchBackTowindow(0);
     }
-    public void switchtest()
-    {
-        clickOnFacebook();
-        backFromFaceBook();
-        clickOnYouTube();
-        backfromYouTube();
-    }
+    
 }
 

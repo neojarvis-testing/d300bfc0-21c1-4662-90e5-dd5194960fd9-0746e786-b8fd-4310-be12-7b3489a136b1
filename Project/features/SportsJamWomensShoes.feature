@@ -5,7 +5,7 @@ Feature: Testing WOmen Sports Shoes page of SportsJam
 	    And I click on the brand section.
 	    Then I verify the brand's page URL
 	    When I click on the search bar
-	    And I send data to the search bar
+	    And I send data "Puma" to the search bar
 	    And I click on the search icon
 	    Then I verify that the search results include Puma
 	    And I click on the Puma brand
@@ -17,7 +17,7 @@ Feature: Testing WOmen Sports Shoes page of SportsJam
 	    And I switch to the iframe for Quick View
 	    When I click on the Wish List button
 	    Then I verify the displayed login prompt message
-	    Then I input data into the email field
-	    And I input data into the password field
+	    Then I input data "test134@gmail.com" into the email field
+	    And I input data "test140@ga" into the password field
 	    And I click on the Sign In button
 	    Then I verify the error message is displayed

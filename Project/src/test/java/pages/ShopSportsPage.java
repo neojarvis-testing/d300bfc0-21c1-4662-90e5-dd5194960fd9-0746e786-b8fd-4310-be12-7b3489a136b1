@@ -1,10 +1,5 @@
 package pages;
 
-
-
-
-
-
 import org.junit.Assert;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -20,8 +15,8 @@ public class ShopSportsPage {
     WebDriverHelper helper;
     
     public ShopSportsPage(ExtentTest test){
-        helper=new WebDriverHelper(Base.driver,test);
-        this.test=test;
+        helper=new WebDriverHelper(Base.driver, test);
+        this.test = test;
     }
     /*
      * a. Method Name: hoverOnRacketSports

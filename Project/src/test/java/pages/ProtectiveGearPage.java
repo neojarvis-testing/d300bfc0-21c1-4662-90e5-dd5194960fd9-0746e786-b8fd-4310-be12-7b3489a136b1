@@ -13,7 +13,7 @@ public class ProtectiveGearPage {
     public WebDriverHelper helper;
     public ProtectiveGearPage(ExtentTest test){
         helper=new WebDriverHelper(Base.driver, test);
-        this.test=test;
+        this.test = test;
     }
     /*
      * a. Method Name: HoverOnTeamSport
