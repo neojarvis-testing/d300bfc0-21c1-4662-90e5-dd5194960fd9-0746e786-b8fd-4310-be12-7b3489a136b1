@@ -31,6 +31,8 @@ public class SportsJamFooterPage {
             helper.clickOnElement(SportsJamFooterLocators.facebookIcon, "Clicked on facebook");
             helper.switchToNewWindow();
             helper.jsScrollUsingPixel(0, 5000, "Scrolled to facebook");
+            Screenshot.captureScreenShot("facebook");
+            Reporter.attachScreenshotToReport("facebook",test,"");
         } catch (Exception e) {
             e.printStackTrace();
         }

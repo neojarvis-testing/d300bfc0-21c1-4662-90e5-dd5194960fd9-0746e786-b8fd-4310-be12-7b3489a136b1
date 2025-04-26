@@ -147,7 +147,7 @@ public class Reporter extends Base {
             String destPath =  "./"+name;
             TakesScreenshot ts = (TakesScreenshot) driver;
             File file = ts.getScreenshotAs(OutputType.FILE);
-            File screenshotsDir = new File(System.getProperty("user.dir") + "/reports/screenshots");
+            File screenshotsDir = new File(System.getProperty("user.dir") + "/reports");
             if (!screenshotsDir.exists()) 
             {
                 screenshotsDir.mkdirs();

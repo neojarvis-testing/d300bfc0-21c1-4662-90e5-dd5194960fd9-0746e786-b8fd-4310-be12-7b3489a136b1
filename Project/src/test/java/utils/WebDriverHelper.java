@@ -254,7 +254,7 @@ public class WebDriverHelper {
         try{
         new WebDriverWait(driver, Duration.ofSeconds(seconds)).until(ExpectedConditions.visibilityOfElementLocated(locator));
         }catch(Exception e){
-            e.printStackTrace();
+            LoggerHandler.error("waiting for element failed");
         }
     }
 	public void navigateBack(String message) {
@@ -329,9 +329,9 @@ public class WebDriverHelper {
         driver.findElement(path).sendKeys(Keys.ENTER);
     }
 
-	public void takeScreenshot(String filaname,String description)
+	public void takeScreenshot(String filename,String description)
 	{
-		Screenshot.TakeScreenshot(filaname);
-        Reporter.attachScreenshotToReport(filaname, test, description);
+		Screenshot.TakeScreenshot(filename);
+        Reporter.attachScreenshotToReport(filename, test, description);
 	}
 }

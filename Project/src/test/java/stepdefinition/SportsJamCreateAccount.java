@@ -69,6 +69,7 @@ public class SportsJamCreateAccount {
     }
     @Then("I verify Error message c.")
     public void i_verify_error_message_c() {
+        sportsJamCreateAccountPage.clickOnSignIn();
         sportsJamCreateAccountPage.verifyErrorMessage();
     }
 
